@@ -16,4 +16,5 @@ export PAGER
 EDITOR=/usr/bin/vi
 export EDITOR
 
+# https://github.com/dtiersch/keybase-completion
 . /home/human/keybase.complete

@@ -172,7 +172,6 @@ function _keybase() {
             unfollow)
                 return 0
                 ;;
-                #update verify version"
             unlock)
                 return 0
                 ;;
@@ -196,5 +195,3 @@ function _keybase() {
     fi
 }
 complete -F _keybase keybase
-
-# vim: syntax=sh sts=4 ts=4 sw=4 sr et
