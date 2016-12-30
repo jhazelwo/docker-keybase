@@ -7,4 +7,3 @@ and device flags for fuse didn't work.
 ## TODO:
 
 * Solve fuse for this
-* add `keybase` cmd completion
