@@ -1,0 +1,13 @@
+.idea
+__pycache__
+.bash_history
+.viminfo
+.python_history
+private
+*.pyc
+*.gz
+*.tar
+*.rpm
+*.zip
+*.exe
+*.pem
