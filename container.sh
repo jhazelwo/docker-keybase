@@ -1,5 +1,5 @@
 #!/bin/sh
-image_name="jhazelwo/keybase:0.1"
+image_name="jhazelwo/keybase:0.2"
 contname="keybase"
 nodename="--hostname=${contname}"
 runname="--name=${contname}"
@@ -9,6 +9,8 @@ build_rm="--force-rm=true"
 with_tty="--tty"
 with_interact="--interactive"
 build_context=$(dirname $0)
+# fuse_opts="--cap-add=SYS_ADMIN --cap-add=MKNOD --device=/dev/fuse" # TODO what am I missing?
+fuse_opts="--privileged"
 
 usage() {
     echo ""
@@ -29,7 +31,7 @@ do_build() {
 }
 
 do_run() {
-    docker run $nodename $runname $run_rm $ports $volumes $with_tty $with_interact $image_name $@
+    docker run $nodename $runname $run_rm $ports $volumes $with_tty $with_interact $fuse_opts $image_name $@
 }
 
 do_kill() {
