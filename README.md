@@ -19,5 +19,3 @@ and device flags for fuse didn't work.
 ## TODO:
 
 * Solve the needed apparmor bits to use fuse without `--privileged`
-* fork, update and PR https://github.com/dtiersch/keybase-completion to
- replace the `complete ...` in _spool/.profile_

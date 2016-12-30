@@ -16,4 +16,5 @@ WORKDIR /home/human
 USER human
 COPY spool/ /tmp/
 RUN install -m 0600 -o 1000 -g 1000 /tmp/.profile /home/human/
+RUN install -m 0700 -o 1000 -g 1000 /tmp/keybase.complete /home/human/
 ENTRYPOINT ["/bin/bash", "--login"]
