@@ -50,7 +50,7 @@ function _keybase() {
                 ;;
             ctl)
                 if [[ $lprev -eq 1 ]]; then
-                    commands="app-exit log-rotate reload restart start stop         watchdog watchdog2 "
+                    commands="app-exit log-rotate reload restart start stop watchdog watchdog2 "
                     COMPREPLY+=($(compgen -W "${commands}" -- ${cur}))
                     return 0
                 fi
