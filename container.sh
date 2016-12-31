@@ -9,8 +9,7 @@ build_rm="--force-rm=true"
 with_tty="--tty"
 with_interact="--interactive"
 build_context=$(dirname $0)
-# fuse_opts="--cap-add=SYS_ADMIN --cap-add=MKNOD --device=/dev/fuse" # TODO what am I missing?
-fuse_opts="--privileged"
+fuse_opts="--cap-add=SYS_ADMIN --cap-add=MKNOD --security-opt apparmor:unconfined --device=/dev/fuse"
 
 usage() {
     echo ""
